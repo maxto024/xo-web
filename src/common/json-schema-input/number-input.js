@@ -20,7 +20,7 @@ export default class NumberInput extends Component {
     const { schema } = this.props
     const {
       disabled,
-      onChange,
+      onChange, // eslint-ignore-line no-unused-vars
       required,
       placeholder = schema.default,
       value,

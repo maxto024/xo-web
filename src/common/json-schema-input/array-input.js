@@ -16,26 +16,18 @@ import {
 
 // ===================================================================
 
-@uncontrollableInput()
-class ArrayItem extends Component {
-  render () {
-    const { children, onDelete } = this.props
-
-    return (
-      <li className='list-group-item clearfix'>
-        {children}
-        <button
-          className='btn btn-danger pull-right'
-          disabled={children.props.disabled}
-          onClick={onDelete}
-          type='button'
-        >
-          {_('remove')}
-        </button>
-      </li>
-    )
-  }
-}
+const ArrayItem = ({ children, onDelete }) =>
+  <li className='list-group-item clearfix'>
+    {children}
+    <button
+      className='btn btn-danger pull-right'
+      disabled={children.props.disabled}
+      onClick={onDelete}
+      type='button'
+    >
+      {_('remove')}
+    </button>
+  </li>
 
 // ===================================================================
 
